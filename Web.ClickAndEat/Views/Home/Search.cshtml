@@ -1,0 +1,16 @@
+﻿@model Web.ClickAndEat.ViewModel.RestaurantViewModel
+
+@{
+    ViewBag.Title = "Search For Restaurants";
+}
+
+<h2>Search For Restaurants</h2>
+
+<form method="post" action="">
+    <br />
+    <div>Enter postcode</div>
+    @Html.TextBoxFor(x => x.searchModel.PostCode)
+    <input type="submit" value="Search" />
+    <br />
+    @Html.ValidationMessageFor(x => x.searchModel.PostCode)
+</form>

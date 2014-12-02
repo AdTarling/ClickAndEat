@@ -1,0 +1,26 @@
+﻿@model Web.ClickAndEat.ViewModel.Restaurant.RestaurantViewModel
+
+<html>
+<head>
+    <title>Restaurants</title>
+</head>
+<body>
+    <div>
+        @foreach(var restaurant in Model.Restaurants){
+            <div>Restaurant Name: </div>
+            <div>@restaurant.Name</div>
+            <br/>
+            <div>Star Rating: </div>
+            <div>@restaurant.RatingStars</div>
+            <br/>
+            foreach (var cuisineType in restaurant.CuisineTypes)
+            {
+                <div>@cuisineType.Name</div>
+                <br/>
+            }
+            <hr width=60%/>
+        }
+        
+    </div>
+</body>
+</html>
